@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>500</width>
-    <height>350</height>
+    <width>200</width>
+    <height>150</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -57,9 +57,34 @@
     </item>
 
     <item>
-     <widget class="QPushButton" name="btnBuy">
+     <layout class="QHBoxLayout" name="horizontalLayoutBuyUser">
+      <item>
+       <widget class="QPushButton" name="btnBuy">
+        <property name="text">
+         <string>Купить выбранный товар</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSpinBox" name="inputBuyQuantityUser">
+        <property name="minimum">
+         <number>1</number>
+        </property>
+        <property name="maximum">
+         <number>1000</number>
+        </property>
+        <property name="value">
+         <number>1</number>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+
+    <item>
+     <widget class="QPushButton" name="btnLogoutUser">
       <property name="text">
-       <string>Купить выбранный товар</string>
+       <string>Выйти</string>
       </property>
      </widget>
     </item>

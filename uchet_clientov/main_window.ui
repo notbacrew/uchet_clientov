@@ -2,6 +2,84 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="styleSheet">
+   <string notr="true">
+    QMainWindow, QWidget#centralwidget {
+        background-color: #F2F2F7;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 14px;
+    }
+    QTabWidget::pane {
+        background: #F2F2F7;
+        border: none;
+    }
+    QTabBar::tab {
+        background: #F2F2F7;
+        border: none;
+        padding: 8px 20px;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #222;
+        border-radius: 8px 8px 0 0;
+        margin-right: 2px;
+    }
+    QTabBar::tab:selected {
+        background:rgb(0, 0, 0);
+        color: #007AFF;
+    }
+    QTableWidget {
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        gridline-color: #E5E5EA;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        border: none;
+    }
+    QHeaderView::section {
+        background-color: #E5E5EA;
+        color: #000000;
+        padding: 4px;
+        border: none;
+        font-weight: normal;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 14px;
+    }
+    QTableWidget::item:selected {
+        background-color: #007AFF;
+        color: #FFFFFF;
+    }
+    QLineEdit, QComboBox, QSpinBox {
+        background: #FFFFFF;
+        border-radius: 8px;
+        border: 1px solid #E5E5EA;
+        padding: 8px 12px;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #222;
+        margin: 2px;
+    }
+    QLineEdit:focus, QComboBox:focus, QSpinBox:focus {
+        border: 1.5px solid #007AFF;
+        outline: none;
+    }
+    QPushButton {
+        background: #FFFFFF;
+        border-radius: 8px;
+        border: 1px solid #E5E5EA;
+        padding: 8px 20px;
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #222;
+    }
+    QPushButton:hover {
+        background: #F2F2F7;
+        color: #007AFF;
+    }
+    QPushButton:pressed {
+        background: #E5E5EA;
+    }
+   </string>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -28,21 +106,65 @@
         </item>
         <item>
          <layout class="QHBoxLayout" name="formClients">
-          <item><widget class="QLineEdit" name="inputClientName"><property name="placeholderText"><string>Имя</string></property></widget></item>
-          <item><widget class="QLineEdit" name="inputClientPhone"><property name="placeholderText"><string>Телефон</string></property></widget></item>
-          <item><widget class="QLineEdit" name="inputClientEmail"><property name="placeholderText"><string>Email</string></property></widget></item>
+          <item>
+           <widget class="QLineEdit" name="inputClientName">
+            <property name="placeholderText">
+             <string>Имя</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="inputClientPhone">
+            <property name="placeholderText">
+             <string>Телефон</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="inputClientEmail">
+            <property name="placeholderText">
+             <string>Email</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="inputUserPassword">
+            <property name="placeholderText">
+             <string>Пароль</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </item>
         <item>
          <layout class="QHBoxLayout">
-          <item><widget class="QPushButton" name="btnAddClient"><property name="text"><string>Добавить</string></property></widget></item>
-          <item><widget class="QPushButton" name="btnDeleteClient"><property name="text"><string>Удалить</string></property></widget></item>
+          <item>
+           <widget class="QPushButton" name="btnAddClient">
+            <property name="text">
+             <string>Добавить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnDeleteClient">
+            <property name="text">
+             <string>Удалить</string>
+            </property>
+           </widget>
+          </item>
          </layout>
+        </item>
+        <item>
+         <widget class="QPushButton" name="btnLogout">
+          <property name="text">
+           <string>Выйти</string>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
 
-      
+
 
       <!-- Вкладка Товары -->
       <widget class="QWidget" name="tabProducts">
@@ -55,14 +177,41 @@
         </item>
         <item>
          <layout class="QHBoxLayout">
-          <item><widget class="QLineEdit" name="inputProductName"><property name="placeholderText"><string>Название</string></property></widget></item>
-          <item><widget class="QLineEdit" name="inputProductPrice"><property name="placeholderText"><string>Цена</string></property></widget></item>
+          <item>
+           <widget class="QLineEdit" name="inputProductName">
+            <property name="placeholderText">
+             <string>Название</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="inputProductPrice">
+            <property name="placeholderText">
+             <string>Цена</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="inputProductQuantity"/>
+          </item>
          </layout>
         </item>
         <item>
          <layout class="QHBoxLayout">
-          <item><widget class="QPushButton" name="btnAddProduct"><property name="text"><string>Добавить</string></property></widget></item>
-          <item><widget class="QPushButton" name="btnDeleteProduct"><property name="text"><string>Удалить</string></property></widget></item>
+          <item>
+           <widget class="QPushButton" name="btnAddProduct">
+            <property name="text">
+             <string>Добавить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnDeleteProduct">
+            <property name="text">
+             <string>Удалить</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </item>
        </layout>
@@ -79,14 +228,34 @@
         </item>
         <item>
          <layout class="QHBoxLayout">
-          <item><widget class="QComboBox" name="comboClient"/></item>
-          <item><widget class="QLineEdit" name="inputOrderDate"><property name="placeholderText"><string>Дата (YYYY-MM-DD)</string></property></widget></item>
+          <item>
+           <widget class="QComboBox" name="comboClient"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="inputOrderDate">
+            <property name="placeholderText">
+             <string>Дата (YYYY-MM-DD)</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </item>
         <item>
          <layout class="QHBoxLayout">
-          <item><widget class="QPushButton" name="btnAddOrder"><property name="text"><string>Добавить</string></property></widget></item>
-          <item><widget class="QPushButton" name="btnDeleteOrder"><property name="text"><string>Удалить</string></property></widget></item>
+          <item>
+           <widget class="QPushButton" name="btnAddOrder">
+            <property name="text">
+             <string>Добавить</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btnDeleteOrder">
+            <property name="text">
+             <string>Удалить</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </item>
        </layout>
