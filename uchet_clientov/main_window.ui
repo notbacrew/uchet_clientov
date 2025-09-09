@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Kursach App</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <!-- Вкладка Клиенты -->
+      <widget class="QWidget" name="tabClients">
+       <attribute name="title">
+        <string>Клиенты</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="layoutClients">
+        <item>
+         <widget class="QTableWidget" name="tableClients"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="formClients">
+          <item><widget class="QLineEdit" name="inputClientName"><property name="placeholderText"><string>Имя</string></property></widget></item>
+          <item><widget class="QLineEdit" name="inputClientPhone"><property name="placeholderText"><string>Телефон</string></property></widget></item>
+          <item><widget class="QLineEdit" name="inputClientEmail"><property name="placeholderText"><string>Email</string></property></widget></item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout">
+          <item><widget class="QPushButton" name="btnAddClient"><property name="text"><string>Добавить</string></property></widget></item>
+          <item><widget class="QPushButton" name="btnDeleteClient"><property name="text"><string>Удалить</string></property></widget></item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+
+      
+
+      <!-- Вкладка Товары -->
+      <widget class="QWidget" name="tabProducts">
+       <attribute name="title">
+        <string>Товары</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="layoutProducts">
+        <item>
+         <widget class="QTableWidget" name="tableProducts"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout">
+          <item><widget class="QLineEdit" name="inputProductName"><property name="placeholderText"><string>Название</string></property></widget></item>
+          <item><widget class="QLineEdit" name="inputProductPrice"><property name="placeholderText"><string>Цена</string></property></widget></item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout">
+          <item><widget class="QPushButton" name="btnAddProduct"><property name="text"><string>Добавить</string></property></widget></item>
+          <item><widget class="QPushButton" name="btnDeleteProduct"><property name="text"><string>Удалить</string></property></widget></item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+
+      <!-- Вкладка Заказы -->
+      <widget class="QWidget" name="tabOrders">
+       <attribute name="title">
+        <string>Заказы</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="layoutOrders">
+        <item>
+         <widget class="QTableWidget" name="tableOrders"/>
+        </item>
+        <item>
+         <layout class="QHBoxLayout">
+          <item><widget class="QComboBox" name="comboClient"/></item>
+          <item><widget class="QLineEdit" name="inputOrderDate"><property name="placeholderText"><string>Дата (YYYY-MM-DD)</string></property></widget></item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout">
+          <item><widget class="QPushButton" name="btnAddOrder"><property name="text"><string>Добавить</string></property></widget></item>
+          <item><widget class="QPushButton" name="btnDeleteOrder"><property name="text"><string>Удалить</string></property></widget></item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
